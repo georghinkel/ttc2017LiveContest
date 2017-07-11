@@ -1,0 +1,11 @@
+{
+  "Tools": ["NMF"],
+  "Models": [
+    "model1",
+    "model2",
+    "model3",
+    "model4"
+  ],
+  "Transformations": ["A", "B"],
+  "Runs": 5
+}

@@ -1,0 +1,12 @@
+{
+  "Dimensions": {
+    "X_Dimensions": {
+      "Model": true
+    },
+    "Groups": {
+      "Transformation": true,
+      "Tool": true
+    }
+  },
+  "Extension": ["png", "pdf"]
+}

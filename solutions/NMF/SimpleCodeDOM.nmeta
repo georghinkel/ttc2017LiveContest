@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nmeta:Namespace xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Uri="http://www.transformation-tool-contest.eu/2017/LiveContest/SimpleCodeDOM" Prefix="codeDom" Name="SimpleCodeDOM" xmlns:xmi="http://www.omg.org/XMI" xmlns:nmeta="http://nmf.codeplex.com/nmeta/">
+  <Types xsi:type="nmeta:Class" IdentifierScope="Local" Identifier="#//Package/Name" Name="Package">
+    <References IsContainment="True" ReferenceType="#//Class" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="Types" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//String" Name="Name" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IdentifierScope="Local" Identifier="#//Class/Name" Name="Class">
+    <References IsContainment="True" ReferenceType="#//Member" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="Members" />
+    <References IsContainment="True" ReferenceType="#//TypeReference" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="BaseTypes" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//String" Name="Name" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="IsInterface" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IsAbstract="True" IdentifierScope="Local" Identifier="#//Member/Name" Name="Member">
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//String" Name="Name" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Member" Name="Field">
+    <References IsContainment="True" ReferenceType="#//TypeReference" IsOrdered="True" IsUnique="True" LowerBound="1" Name="FieldType" />
+    <References ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" Name="InitValue" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Member" Name="Method">
+    <References IsContainment="True" ReferenceType="#//Parameter" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="Parameters" />
+    <References IsContainment="True" ReferenceType="#//TypeReference" IsOrdered="True" IsUnique="True" LowerBound="1" Name="ReturnType" />
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="BodyExpression" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="IsAbstract" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Member" Name="Property">
+    <References IsContainment="True" ReferenceType="#//TypeReference" IsOrdered="True" IsUnique="True" LowerBound="1" Name="PropertyType" />
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="Getter" />
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="Setter" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="IsAbstract" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IdentifierScope="Local" Identifier="#//Parameter/Name" Name="Parameter">
+    <References ReferenceType="#//TypeReference" IsOrdered="True" IsUnique="True" LowerBound="1" Name="Type" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//String" Name="Name" />
+  </Types>
+  <Types xsi:type="nmeta:Class" Name="TypeReference">
+    <References IsContainment="True" ReferenceType="#//TypeReference" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="GenericTypeArguments" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//String" Name="BaseName" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IsAbstract="True" Name="Expression" />
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="ThisReferenceExpression" />
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="NullExpression" />
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="FieldReferenceExpression">
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="TargetObject" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//String" Name="FieldName" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="MethodInvokeExpression">
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" Name="TargetObject" />
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="Arguments" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//String" Name="MethodName" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="ParameterReferenceExpression">
+    <References ReferenceType="#//Parameter" IsOrdered="True" IsUnique="True" LowerBound="1" Name="Parameter" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="ConditionalExpression">
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="Test" />
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="TrueExpression" />
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="FalseExpression" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="IntegerLiteralExpression">
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//Integer" Name="Value" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="BooleanLiteralExpression">
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="Value" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="StringLiteralExpression">
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="http://nmf.codeplex.com/nmeta/#//String" Name="Value" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="BinaryExpression">
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="LeftOperand" />
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="RightOperand" />
+    <Attributes IsOrdered="True" IsUnique="True" LowerBound="1" Type="#//BinaryOperator" Name="Operator" />
+  </Types>
+  <Types xsi:type="nmeta:Enumeration" Name="BinaryOperator">
+    <Literals Name="Add" />
+    <Literals Value="1" Name="Subtract" />
+    <Literals Value="2" Name="Multiply" />
+    <Literals Value="3" Name="Divide" />
+    <Literals Value="4" Name="Equals" />
+    <Literals Value="5" Name="NotEquals" />
+    <Literals Value="6" Name="GreatherThan" />
+    <Literals Value="7" Name="LessThan" />
+    <Literals Value="8" Name="GreatherThanOrEqual" />
+    <Literals Value="9" Name="LessThanOrEqual" />
+    <Literals Value="10" Name="Assign" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="IsTypeExpression">
+    <References ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" LowerBound="1" Name="Inner" />
+    <References IsContainment="True" ReferenceType="#//TypeReference" IsOrdered="True" IsUnique="True" LowerBound="1" Name="Type" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="ExpressionBlock">
+    <References IsContainment="True" ReferenceType="#//Expression" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="Inner" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//Expression" Name="SetValueExpression" />
+</nmeta:Namespace>

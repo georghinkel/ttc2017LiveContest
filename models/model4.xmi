@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ecoreR:EPackage xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nsURI="http://www.transformation-tool-contest.eu/2017/LiveContest/testModels/model4" nsPrefix="model4" name="model4" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecoreR="http://www.transformation-tool-contest.eu/2017/LiveContest/RefinementsEcore">
+  <eClassifiers xsi:type="ecoreR:EClass" name="A">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.4" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.0" name="B">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.0/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.4" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.0" name="C">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.4" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.1 #//@eClassifiers.2" name="D">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.1/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.4" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E" />
+</ecoreR:EPackage>

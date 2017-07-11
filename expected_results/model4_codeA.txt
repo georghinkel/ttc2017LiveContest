@@ -1,0 +1,57 @@
+package model4:
+
+interface A
+  abstract property PropA : E
+
+class AImpl : A
+  field _PropA : E
+  property PropA : E
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface B : A
+  abstract property PropB : E
+
+class BImpl : B
+  field _PropB : E
+  property PropA : E
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface C : A
+  abstract property PropC : E
+
+class CImpl : AImpl, C
+  field _PropC : E
+  property PropC : E
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface D : B, C
+  abstract property PropD : E
+
+class DImpl : D
+  field _PropC : E
+  field _PropD : E
+  property PropA : E
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface E
+class EImpl : E

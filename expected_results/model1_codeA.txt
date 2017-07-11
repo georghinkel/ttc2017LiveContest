@@ -1,0 +1,35 @@
+package model1:
+
+interface A
+  abstract property PropA : D
+
+class AImpl : A
+  field _PropA : D
+  property PropA : D
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface B : A
+  abstract property PropB : D
+
+class BImpl : AImpl, B
+  field _PropB : D
+  property PropB : D
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface C : A
+  abstract property PropC : D
+
+class CImpl : C
+  field _PropC : D
+  property PropA : D
+    get: this.PropC
+    set: (this.PropC = value)
+
+  property PropC : D
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface D
+class DImpl : D

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D7B73F8-FADB-4259-B3DF-A7AA5002DF4C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TTC2017.LiveContest</RootNamespace>
+    <AssemblyName>NMFCodeGenerator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NMF.Collections, Version=1.0.85.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NMF\Models\Models\bin\Debug\NMF.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NMF.Expressions, Version=1.0.85.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NMF\Models\Models\bin\Debug\NMF.Expressions.dll</HintPath>
+    </Reference>
+    <Reference Include="NMF.Expressions.Linq, Version=1.0.85.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NMF\Models\Models\bin\Debug\NMF.Expressions.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="NMF.Layering, Version=1.0.85.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NMF\Analysis\Layering\bin\Debug\NMF.Layering.dll</HintPath>
+    </Reference>
+    <Reference Include="NMF.Models, Version=1.0.85.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NMF\Models\Models\bin\Debug\NMF.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="NMF.Serialization, Version=1.0.85.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NMF\Models\Models\bin\Debug\NMF.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="NMF.Synchronizations">
+      <HintPath>..\..\..\..\NMF\Synchronizations\Synchronizations\bin\Debug\NMF.Synchronizations.dll</HintPath>
+    </Reference>
+    <Reference Include="NMF.Transformations, Version=1.0.85.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NMF\Synchronizations\Synchronizations\bin\Debug\NMF.Transformations.dll</HintPath>
+    </Reference>
+    <Reference Include="NMF.Transformations.Core, Version=1.0.85.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NMF\Synchronizations\Synchronizations\bin\Debug\NMF.Transformations.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NMF.Utilities, Version=1.0.85.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\NMF\Models\Models\bin\Debug\NMF.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExampleModels.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EAnnotation.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EAttribute.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EClass.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EClassEOperationsCollection.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EClassEStructuralFeaturesCollection.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EClassifier.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EDataType.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EEnum.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EEnumELiteralsCollection.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EEnumLiteral.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EModelElement.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EModelElementEAnnotationsCollection.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\ENamedElement.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EOperation.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EOperationEParametersCollection.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EPackage.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EPackageEClassifiersCollection.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EPackageESubpackagesCollection.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EParameter.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EReference.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\EStructuralFeature.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\ETypedElement.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEAnnotation.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEAttribute.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEClass.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEClassifier.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEDataType.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEEnum.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEEnumLiteral.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEModelElement.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IENamedElement.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEOperation.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEPackage.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEParameter.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEReference.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IEStructuralFeature.cs" />
+    <Compile Include="Metamodel\RefinementsEcore\IETypedElement.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\BinaryExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\BinaryOperator.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\BooleanLiteralExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\Class.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\ConditionalExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\Expression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\ExpressionBlock.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\Field.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\FieldReferenceExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IBinaryExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IBooleanLiteralExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IClass.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IConditionalExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IExpressionBlock.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IField.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IFieldReferenceExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IIntegerLiteralExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IIsTypeExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IMember.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IMethod.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IMethodInvokeExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IntegerLiteralExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\INullExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IPackage.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IParameter.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IParameterReferenceExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IProperty.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\ISetValueExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IStringLiteralExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IsTypeExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\IThisReferenceExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\ITypeReference.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\Member.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\Method.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\MethodInvokeExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\NullExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\Package.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\Parameter.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\ParameterReferenceExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\Property.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\SetValueExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\StringLiteralExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\ThisReferenceExpression.cs" />
+    <Compile Include="Metamodel\SimpleCodeDOM\TypeReference.cs" />
+    <Compile Include="Printer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared.cs" />
+    <Compile Include="TransformationA.cs" />
+    <Compile Include="TransformationB.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EmbeddedResource Include="RefinementsEcore.nmeta" />
+    <EmbeddedResource Include="SimpleCodeDOM.nmeta" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

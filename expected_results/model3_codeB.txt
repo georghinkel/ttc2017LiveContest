@@ -1,0 +1,38 @@
+package model3:
+
+interface A
+  abstract method get_PropA() : E
+
+class AImpl : DBObject, A
+  method get_PropA() : E
+    resolve(this, 'PropA')
+
+interface B : A
+  abstract method get_PropB() : E
+
+class BImpl : AImpl, B
+  method get_PropB() : E
+    resolve(this, 'PropB')
+
+interface C : A
+  abstract method get_PropC() : E
+
+class CImpl : DBObject, C
+  method get_PropA() : E
+    this.get_PropC()
+
+  method get_PropC() : E
+    resolve(this, 'PropC')
+
+interface D : B, C
+  abstract method get_PropD() : E
+
+class DImpl : CImpl, D
+  method get_PropB() : E
+    resolve(this, 'PropB')
+
+  method get_PropD() : E
+    resolve(this, 'PropD')
+
+interface E
+class EImpl : DBObject, E

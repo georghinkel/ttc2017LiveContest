@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeDom:Package xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="model3" xmlns:xmi="http://www.omg.org/XMI" xmlns:codeDom="http://www.transformation-tool-contest.eu/2017/LiveContest/SimpleCodeDOM">
+  <Types Name="AImpl">
+    <Members xsi:type="codeDom:Method" Name="get_PropA">
+      <ReturnType BaseName="E" />
+      <BodyExpression xsi:type="codeDom:MethodInvokeExpression" MethodName="resolve">
+        <Arguments xsi:type="codeDom:ThisReferenceExpression" />
+        <Arguments xsi:type="codeDom:StringLiteralExpression" Value="PropA" />
+      </BodyExpression>
+    </Members>
+    <BaseTypes BaseName="DBObject" />
+    <BaseTypes BaseName="A" />
+  </Types>
+  <Types Name="BImpl">
+    <Members xsi:type="codeDom:Method" Name="get_PropB">
+      <ReturnType BaseName="E" />
+      <BodyExpression xsi:type="codeDom:MethodInvokeExpression" MethodName="resolve">
+        <Arguments xsi:type="codeDom:ThisReferenceExpression" />
+        <Arguments xsi:type="codeDom:StringLiteralExpression" Value="PropB" />
+      </BodyExpression>
+    </Members>
+    <BaseTypes BaseName="AImpl" />
+    <BaseTypes BaseName="B" />
+  </Types>
+  <Types Name="CImpl">
+    <Members xsi:type="codeDom:Method" Name="get_PropC">
+      <ReturnType BaseName="E" />
+      <BodyExpression xsi:type="codeDom:MethodInvokeExpression" MethodName="resolve">
+        <Arguments xsi:type="codeDom:ThisReferenceExpression" />
+        <Arguments xsi:type="codeDom:StringLiteralExpression" Value="PropC" />
+      </BodyExpression>
+    </Members>
+    <Members xsi:type="codeDom:Method" Name="get_PropA">
+      <ReturnType BaseName="E" />
+      <BodyExpression xsi:type="codeDom:MethodInvokeExpression" MethodName="get_PropC">
+        <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+      </BodyExpression>
+    </Members>
+    <BaseTypes BaseName="DBObject" />
+    <BaseTypes BaseName="C" />
+  </Types>
+  <Types Name="DImpl">
+    <Members xsi:type="codeDom:Method" Name="get_PropD">
+      <ReturnType BaseName="E" />
+      <BodyExpression xsi:type="codeDom:MethodInvokeExpression" MethodName="resolve">
+        <Arguments xsi:type="codeDom:ThisReferenceExpression" />
+        <Arguments xsi:type="codeDom:StringLiteralExpression" Value="PropD" />
+      </BodyExpression>
+    </Members>
+    <Members xsi:type="codeDom:Method" Name="get_PropB">
+      <ReturnType BaseName="E" />
+      <BodyExpression xsi:type="codeDom:MethodInvokeExpression" MethodName="resolve">
+        <Arguments xsi:type="codeDom:ThisReferenceExpression" />
+        <Arguments xsi:type="codeDom:StringLiteralExpression" Value="PropB" />
+      </BodyExpression>
+    </Members>
+    <BaseTypes BaseName="CImpl" />
+    <BaseTypes BaseName="D" />
+  </Types>
+  <Types Name="EImpl">
+    <BaseTypes BaseName="DBObject" />
+    <BaseTypes BaseName="E" />
+  </Types>
+  <Types Name="A" IsInterface="True">
+    <Members xsi:type="codeDom:Method" IsAbstract="True" Name="get_PropA">
+      <ReturnType BaseName="E" />
+    </Members>
+  </Types>
+  <Types Name="B" IsInterface="True">
+    <Members xsi:type="codeDom:Method" IsAbstract="True" Name="get_PropB">
+      <ReturnType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="A" />
+  </Types>
+  <Types Name="C" IsInterface="True">
+    <Members xsi:type="codeDom:Method" IsAbstract="True" Name="get_PropC">
+      <ReturnType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="A" />
+  </Types>
+  <Types Name="D" IsInterface="True">
+    <Members xsi:type="codeDom:Method" IsAbstract="True" Name="get_PropD">
+      <ReturnType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="B" />
+    <BaseTypes BaseName="C" />
+  </Types>
+  <Types Name="E" IsInterface="True" />
+</codeDom:Package>

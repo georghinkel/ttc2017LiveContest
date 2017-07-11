@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<nmeta:Namespace xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Uri="http://www.transformation-tool-contest.eu/2017/LiveContest/RefinementsEcore" Prefix="ecoreR" Name="RefinementsEcore" xmlns:xmi="http://www.omg.org/XMI" xmlns:nmeta="http://nmf.codeplex.com/nmeta/">
+  <Types xsi:type="nmeta:Class" BaseTypes="#//EStructuralFeature" Name="EAttribute">
+    <References ReferenceType="#//EAttribute" IsOrdered="True" IsUnique="True" Name="Refines" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Integer" Name="iD" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//EModelElement" Name="EAnnotation">
+    <References Opposite="#//EModelElement/eAnnotations" ReferenceType="#//EModelElement" IsOrdered="True" IsUnique="True" Name="eModelElement" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//String" Name="source" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//EClassifier" Name="EClass">
+    <References ReferenceType="#//EClass" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eSuperTypes" />
+    <References IsContainment="True" Opposite="#//EOperation/eContainingClass" ReferenceType="#//EOperation" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eOperations" />
+    <References IsContainment="True" Opposite="#//EStructuralFeature/eContainingClass" ReferenceType="#//EStructuralFeature" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eStructuralFeatures" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="abstract" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="interface" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IsAbstract="True" BaseTypes="#//ENamedElement" Name="EClassifier">
+    <References Opposite="#//EPackage/eClassifiers" ReferenceType="#//EPackage" IsOrdered="True" IsUnique="True" Name="ePackage" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//String" Name="instanceClassName" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//String" Name="instanceTypeName" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//EClassifier" Name="EDataType">
+    <Attributes DefaultValue="true" IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="serializable" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//EDataType" Name="EEnum">
+    <References IsContainment="True" Opposite="#//EEnumLiteral/eEnum" ReferenceType="#//EEnumLiteral" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eLiterals" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//ENamedElement" Name="EEnumLiteral">
+    <References Opposite="#//EEnum/eLiterals" ReferenceType="#//EEnum" IsOrdered="True" IsUnique="True" Name="eEnum" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Integer" Name="value" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//String" Name="literal" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IsAbstract="True" Name="EModelElement">
+    <References IsContainment="True" Opposite="#//EAnnotation/eModelElement" ReferenceType="#//EAnnotation" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eAnnotations" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IsAbstract="True" IdentifierScope="Local" BaseTypes="#//EModelElement" Identifier="#//ENamedElement/name" Name="ENamedElement">
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//String" Name="name" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//ETypedElement" Name="EOperation">
+    <References Opposite="#//EClass/eOperations" ReferenceType="#//EClass" IsOrdered="True" IsUnique="True" Name="eContainingClass" />
+    <References IsContainment="True" Opposite="#//EParameter/eOperation" ReferenceType="#//EParameter" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eParameters" />
+    <References ReferenceType="#//EClassifier" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eExceptions" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//ENamedElement" Name="EPackage">
+    <References IsContainment="True" Opposite="#//EClassifier/ePackage" ReferenceType="#//EClassifier" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eClassifiers" />
+    <References IsContainment="True" Opposite="#//EPackage/eSuperPackage" ReferenceType="#//EPackage" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eSubpackages" />
+    <References Opposite="#//EPackage/eSubpackages" ReferenceType="#//EPackage" IsOrdered="True" IsUnique="True" Name="eSuperPackage" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//String" Name="nsURI" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//String" Name="nsPrefix" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//ETypedElement" Name="EParameter">
+    <References Opposite="#//EOperation/eParameters" ReferenceType="#//EOperation" IsOrdered="True" IsUnique="True" Name="eOperation" />
+  </Types>
+  <Types xsi:type="nmeta:Class" BaseTypes="#//EStructuralFeature" Name="EReference">
+    <References ReferenceType="#//EReference" IsOrdered="True" IsUnique="True" Name="eOpposite" />
+    <References ReferenceType="#//EAttribute" IsOrdered="True" IsUnique="True" UpperBound="-1" Name="eKeys" />
+    <References ReferenceType="#//EReference" IsOrdered="True" IsUnique="True" Name="Refines" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="containment" />
+    <Attributes DefaultValue="true" IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="resolveProxies" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IsAbstract="True" BaseTypes="#//ETypedElement" Name="EStructuralFeature">
+    <References Opposite="#//EClass/eStructuralFeatures" ReferenceType="#//EClass" IsOrdered="True" IsUnique="True" Name="eContainingClass" />
+    <Attributes DefaultValue="true" IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="changeable" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="volatile" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="transient" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//String" Name="defaultValueLiteral" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="unsettable" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="derived" />
+  </Types>
+  <Types xsi:type="nmeta:Class" IsAbstract="True" BaseTypes="#//ENamedElement" Name="ETypedElement">
+    <References ReferenceType="#//EClassifier" IsOrdered="True" IsUnique="True" Name="eType" />
+    <Attributes DefaultValue="true" IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="ordered" />
+    <Attributes DefaultValue="true" IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Boolean" Name="unique" />
+    <Attributes IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Integer" Name="lowerBound" />
+    <Attributes DefaultValue="1" IsOrdered="True" IsUnique="True" Type="http://nmf.codeplex.com/nmeta/#//Integer" Name="upperBound" />
+  </Types>
+</nmeta:Namespace>

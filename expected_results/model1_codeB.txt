@@ -1,0 +1,28 @@
+package model1:
+
+interface A
+  abstract method get_PropA() : D
+
+class AImpl : DBObject, A
+  method get_PropA() : D
+    resolve(this, 'PropA')
+
+interface B : A
+  abstract method get_PropB() : D
+
+class BImpl : AImpl, B
+  method get_PropB() : D
+    resolve(this, 'PropB')
+
+interface C : A
+  abstract method get_PropC() : D
+
+class CImpl : DBObject, C
+  method get_PropA() : D
+    this.get_PropC()
+
+  method get_PropC() : D
+    resolve(this, 'PropC')
+
+interface D
+class DImpl : DBObject, D
