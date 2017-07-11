@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SimpleCodeDOM/src" modelPluginID="SimpleCodeDOM"
+    modelName="RefinementsEcore" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>RefinementsEcore.ecore</foreignModel>
+  <genPackages prefix="RefinementsEcore" disposableProviderFactory="true" ecorePackage="RefinementsEcore.ecore#/">
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EBigDecimal"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EBigInteger"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EBoolean"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EBooleanObject"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EByte"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EByteArray"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EByteObject"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EChar"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//ECharacterObject"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EDate"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EDiagnosticChain"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EDouble"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EDoubleObject"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EEList">
+      <genTypeParameters ecoreTypeParameter="RefinementsEcore.ecore#//EEList/E"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EEnumerator"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EFeatureMap"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EFeatureMapEntry"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EFloat"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EFloatObject"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EInt"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EIntegerObject"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EJavaClass">
+      <genTypeParameters ecoreTypeParameter="RefinementsEcore.ecore#//EJavaClass/T"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EJavaObject"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//ELong"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//ELongObject"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EMap">
+      <genTypeParameters ecoreTypeParameter="RefinementsEcore.ecore#//EMap/K"/>
+      <genTypeParameters ecoreTypeParameter="RefinementsEcore.ecore#//EMap/V"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EResource"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EResourceSet"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EShort"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EShortObject"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EString"/>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//ETreeIterator">
+      <genTypeParameters ecoreTypeParameter="RefinementsEcore.ecore#//ETreeIterator/E"/>
+    </genDataTypes>
+    <genDataTypes ecoreDataType="RefinementsEcore.ecore#//EInvocationTargetException"/>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EAttribute/iD"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EAttribute/eAttributeType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EAttribute/Refines"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EAnnotation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EAnnotation/source"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EAnnotation/details"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EAnnotation/eModelElement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EAnnotation/contents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EAnnotation/references"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EClass/abstract"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EClass/interface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eSuperTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eOperations"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eAllAttributes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eAllReferences"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eReferences"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eAttributes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eAllContainments"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eAllOperations"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eAllStructuralFeatures"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eAllSuperTypes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eIDAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eStructuralFeatures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eGenericSuperTypes"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClass/eAllGenericSuperTypes"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClass/isSuperTypeOf">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EClass/isSuperTypeOf/someClass"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClass/getFeatureCount"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClass/getEStructuralFeature">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EClass/getEStructuralFeature/featureID"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClass/getFeatureID">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EClass/getFeatureID/feature"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClass/getEStructuralFeature.1">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EClass/getEStructuralFeature.1/featureName"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClass/getOperationCount"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClass/getEOperation">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EClass/getEOperation/operationID"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClass/getOperationID">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EClass/getOperationID/operation"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClass/getOverride">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EClass/getOverride/operation"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="RefinementsEcore.ecore#//EClassifier">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EClassifier/instanceClassName"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EClassifier/instanceClass"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EClassifier/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EClassifier/instanceTypeName"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClassifier/ePackage"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EClassifier/eTypeParameters"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClassifier/isInstance">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EClassifier/isInstance/object"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EClassifier/getClassifierID"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EDataType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EDataType/serializable"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EEnum">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EEnum/eLiterals"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EEnum/getEEnumLiteral">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EEnum/getEEnumLiteral/name"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EEnum/getEEnumLiteral.1">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EEnum/getEEnumLiteral.1/value"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EEnum/getEEnumLiteralByLiteral">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EEnum/getEEnumLiteralByLiteral/literal"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EEnumLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EEnumLiteral/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EEnumLiteral/instance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EEnumLiteral/literal"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EEnumLiteral/eEnum"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EFactory">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EFactory/ePackage"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EFactory/create">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EFactory/create/eClass"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EFactory/createFromString">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EFactory/createFromString/eDataType"/>
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EFactory/createFromString/literalValue"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EFactory/convertToString">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EFactory/convertToString/eDataType"/>
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EFactory/convertToString/instanceValue"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="RefinementsEcore.ecore#//EModelElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EModelElement/eAnnotations"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EModelElement/getEAnnotation">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EModelElement/getEAnnotation/source"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="RefinementsEcore.ecore#//ENamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//ENamedElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EObject">
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eClass"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eIsProxy"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eResource"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eContainer"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eContainingFeature"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eContainmentFeature"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eContents"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eAllContents"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eCrossReferences"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eGet">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EObject/eGet/feature"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eGet.1">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EObject/eGet.1/feature"/>
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EObject/eGet.1/resolve"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eSet">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EObject/eSet/feature"/>
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EObject/eSet/newValue"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eIsSet">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EObject/eIsSet/feature"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eUnset">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EObject/eUnset/feature"/>
+      </genOperations>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EObject/eInvoke">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EObject/eInvoke/operation"/>
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EObject/eInvoke/arguments"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EOperation">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EOperation/eContainingClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EOperation/eTypeParameters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EOperation/eParameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EOperation/eExceptions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EOperation/eGenericExceptions"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EOperation/getOperationID"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EOperation/isOverrideOf">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EOperation/isOverrideOf/someOperation"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EPackage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EPackage/nsURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EPackage/nsPrefix"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EPackage/eFactoryInstance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EPackage/eClassifiers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EPackage/eSubpackages"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EPackage/eSuperPackage"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EPackage/getEClassifier">
+        <genParameters ecoreParameter="RefinementsEcore.ecore#//EPackage/getEClassifier/name"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EParameter">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EParameter/eOperation"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EReference/containment"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EReference/container"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EReference/resolveProxies"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EReference/eOpposite"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EReference/eReferenceType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EReference/eKeys"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EReference/Refines"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="RefinementsEcore.ecore#//EStructuralFeature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EStructuralFeature/changeable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EStructuralFeature/volatile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EStructuralFeature/transient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EStructuralFeature/defaultValueLiteral"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EStructuralFeature/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EStructuralFeature/unsettable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EStructuralFeature/derived"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EStructuralFeature/eContainingClass"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EStructuralFeature/getFeatureID"/>
+      <genOperations ecoreOperation="RefinementsEcore.ecore#//EStructuralFeature/getContainerClass"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="RefinementsEcore.ecore#//ETypedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//ETypedElement/ordered"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//ETypedElement/unique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//ETypedElement/lowerBound"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//ETypedElement/upperBound"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//ETypedElement/many"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//ETypedElement/required"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//ETypedElement/eType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//ETypedElement/eGenericType"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EStringToStringMapEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EStringToStringMapEntry/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute RefinementsEcore.ecore#//EStringToStringMapEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//EGenericType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EGenericType/eUpperBound"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EGenericType/eTypeArguments"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EGenericType/eRawType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EGenericType/eLowerBound"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EGenericType/eTypeParameter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//EGenericType/eClassifier"/>
+    </genClasses>
+    <genClasses ecoreClass="RefinementsEcore.ecore#//ETypeParameter">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference RefinementsEcore.ecore#//ETypeParameter/eBounds"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

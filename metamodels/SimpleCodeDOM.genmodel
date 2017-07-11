@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/SimpleCodeDOM/src" modelPluginID="SimpleCodeDOM"
+    modelName="SimpleCodeDOM" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>SimpleCodeDOM.ecore</foreignModel>
+  <genPackages prefix="SimpleCodeDOM" disposableProviderFactory="true" ecorePackage="SimpleCodeDOM.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="SimpleCodeDOM.ecore#//BinaryOperator">
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/Add"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/Subtract"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/Multiply"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/Divide"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/Equals"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/NotEquals"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/GreatherThan"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/LessThan"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/GreatherThanOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/LessThanOrEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="SimpleCodeDOM.ecore#//BinaryOperator/Assign"/>
+    </genEnums>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//Package">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//Package/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Package/Types"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//Class">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//Class/Name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//Class/IsInterface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Class/Members"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Class/BaseTypes"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SimpleCodeDOM.ecore#//Member">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//Member/Name"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//Field">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Field/FieldType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Field/InitValue"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//Method">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Method/Parameters"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//Method/IsAbstract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Method/ReturnType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Method/BodyExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//Property">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Property/PropertyType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//Property/IsAbstract"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Property/Getter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Property/Setter"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//Parameter/Name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//Parameter/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//TypeReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//TypeReference/BaseName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//TypeReference/GenericTypeArguments"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="SimpleCodeDOM.ecore#//Expression"/>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//ThisReferenceExpression"/>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//NullExpression"/>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//FieldReferenceExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//FieldReferenceExpression/TargetObject"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//FieldReferenceExpression/FieldName"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//MethodInvokeExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//MethodInvokeExpression/TargetObject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//MethodInvokeExpression/Arguments"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//MethodInvokeExpression/MethodName"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//ParameterReferenceExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//ParameterReferenceExpression/Parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//ConditionalExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//ConditionalExpression/Test"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//ConditionalExpression/TrueExpression"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//ConditionalExpression/FalseExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//IntegerLiteralExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//IntegerLiteralExpression/Value"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//BooleanLiteralExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//BooleanLiteralExpression/Value"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//StringLiteralExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//StringLiteralExpression/Value"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//BinaryExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//BinaryExpression/LeftOperand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//BinaryExpression/RightOperand"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute SimpleCodeDOM.ecore#//BinaryExpression/Operator"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//IsTypeExpression">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//IsTypeExpression/Inner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//IsTypeExpression/Type"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//ExpressionBlock">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference SimpleCodeDOM.ecore#//ExpressionBlock/Inner"/>
+    </genClasses>
+    <genClasses ecoreClass="SimpleCodeDOM.ecore#//SetValueExpression"/>
+  </genPackages>
+</genmodel:GenModel>
