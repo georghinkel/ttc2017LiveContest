@@ -12,6 +12,7 @@ The `docs/2017_TTC_Live.pdf` file contains the case description.
 * R
 * * jsonlite
 * * ggplot2
+* .NET 4.5.1 to run correctness checks (the model printer uses NMF). .NET 4.5.1 in turn requires at least Windows Vista SP1.
 
 ## Solution Prerequisites
 
