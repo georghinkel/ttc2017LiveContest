@@ -10,6 +10,8 @@ The `docs/2017_TTC_Live.pdf` file contains the case description.
 
 * Python 2.7 or higher
 * R
+* * jsonlite
+* * ggplot2
 
 ## Solution Prerequisites
 
