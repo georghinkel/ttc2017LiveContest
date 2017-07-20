@@ -1,0 +1,123 @@
+-- @atlcompiler emftvm
+-- @path REcore=/ATL/model/RefinementsEcore.ecore
+-- @path Code=/ATL/model/SimpleCodeDOM.ecore
+module transformationShared;
+create OUT : Code from IN : REcore;
+
+helper context REcore!EClass def: implName : String =
+	self.name + 'Impl';
+
+rule EPackage2Package {
+	from
+		s : REcore!EPackage
+	to
+		t : Code!Package (
+			Name <- s.name,
+			Types <- s.eClassifiers->collect(c |
+					thisModule.resolveTemp(c, 'impl')
+				)->union(s.eClassifiers)
+		)
+}
+
+abstract rule EClass2Interface {
+	from
+		s : REcore!EClass
+	to
+		t : Code!Class (
+			IsInterface <- true,
+			Name <- s.name,
+			BaseTypes <-	s.eSuperTypes->collect(c |
+								thisModule.IfaceRef(c)
+							),
+			Members <- s.eStructuralFeatures
+		)
+}
+
+lazy rule IfaceRef {
+	from
+		s : REcore!EClassifier
+	to
+		t : Code!TypeReference (
+			BaseName <- s.name
+		)
+}
+
+lazy rule ImplRef {
+	from
+		s : REcore!EClassifier
+	to
+		t : Code!TypeReference (
+			BaseName <- s.implName
+		)
+}
+
+helper context REcore!EClass def: ancestors : OrderedSet(REcore!EClass) =
+	self.eSuperTypes->collect(c |
+		c.ancestors->prepend(c)
+	)->flatten()->asOrderedSet();
+
+helper context REcore!EClass def: allFeatures : Sequence(REcore!EStructuralFeature) =
+	self.eStructuralFeatures->union(
+		self.eSuperTypes->collect(c |
+			c.allFeatures
+		)->flatten()
+	)->asOrderedSet();
+	
+helper context REcore!EClass def: refinements : Sequence(REcore!EStructuralFeature) =
+	self.eStructuralFeatures->reject(r |
+		r.Refines.oclIsUndefined()
+	)->collect(r |
+		r.Refines
+	);	
+
+helper context Map(REcore!EClass, Set(REcore!EClass)) def: add(c1: REcore!EClass, c2: REcore!EClass) : Map(REcore!EClass, Set(REcore!EClass)) =
+	if (self.get(c1) = OclUndefined) 
+	then self.including(c1, Set{c2})
+	else self.including(c1, self.get(c1)->including(c2))
+	endif;
+
+helper context Map(REcore!EClass, Set(REcore!EClass)) def: add(c1: REcore!EClass, lc2: Set(REcore!EClass)) : Map(REcore!EClass, Set(REcore!EClass)) =
+	lc2->iterate(c2; m: Map(REcore!EClass, Set(REcore!EClass)) = self | m.add(c1, c2));
+
+helper context Map(REcore!EClass, Set(REcore!EClass)) def: add(m : Map(REcore!EClass, Set(REcore!EClass))) : Map(REcore!EClass, Set(REcore!EClass)) =
+	m->getKeys()->iterate(k; m1: Map(REcore!EClass, Set(REcore!EClass)) = self | self.add(k, m.get(k)));
+
+helper def: edge : Map(REcore!EClass, Set(REcore!EClass)) =
+	REcore!EClass.allInstancesFrom('IN')->iterate(cs; edges : Map(REcore!EClass, REcore!EClass) = Map{} |
+		edges->add(
+			REcore!EClass.allInstances()->iterate(ct; edges1 : Map(REcore!EClass, REcore!EClass) = Map{} | 
+				if (cs.ancestors->includes(ct) or 
+						(cs.refinements->asSet()->intersection(ct.allFeatures->asSet())->notEmpty() and 
+						 not ct.ancestors->includes(cs)))
+			 	then edges1.add(cs, ct)
+				else edges1
+				endif)
+		)
+	).debug();
+
+helper context REcore!EClass def: findBaseClass : Sequence(REcore!EClass) =
+	let layers : Sequence(Sequence(REcore!EClass)) = self.ePackage.reverseTopologicalOrder(self, thisModule.edge).debug('layers' + self.name) in
+		layers->iterate(layer; acc : TupleType(shadows: Sequence(REcore!EStructuralFeature), ret: Sequence(REcore!EClass) ) = 
+				Tuple{shadows = self.refinements, ret = Sequence {}} | 
+			if acc.ret->isEmpty() then
+				Tuple {
+					shadows = acc.shadows.debug('shadows')->union(layer.debug('layer')->collect(l | l.refinements)->flatten())
+					,
+					ret = if (layer->size() = 1 and layer <> Sequence{self} and
+						acc.shadows->asSet()->intersection(layer->first().allFeatures->asSet())->isEmpty()
+					) then layer else acc.ret endif
+				}		
+			else
+				acc
+			endif
+		).ret;
+
+helper context REcore!EClass def: featuresToImpl : Sequence(REcore!EStructuralFeature) =
+	let inheritedFeatures : Sequence(REcore!EStructuralFeature) =
+		self.findBaseClass->collect(c | c.allFeatures)->flatten()
+	in
+		self.allFeatures->reject(r | inheritedFeatures->includes(r));
+
+helper context REcore!EReference def: refiningFeatureIn(c : REcore!EClass) : REcore!EReference =
+	c.allFeatures->any(r | r.Refines = self);
+

@@ -1,0 +1,100 @@
+-- @atlcompiler emftvm
+-- @path REcore=/ATL/model/RefinementsEcore.ecore
+-- @path Code=/ATL/model/SimpleCodeDOM.ecore
+module transformationB;
+create OUT : Code from IN : REcore;
+
+uses transformationShared;
+
+-- @extends EClass2Interface
+rule EClass2Class {
+	from
+		s : REcore!EClass
+	to
+		t : Code!Class,
+		impl : Code!Class (
+			IsInterface <- false,
+			Name <- s.implName,
+			-- Change 1: added additional part for creating the Type Ref to the DBObject
+			BaseTypes <- s.findBaseClass->collect(e |
+				thisModule.ImplRef(e)
+			)->union(
+				if s.findBaseClass->isEmpty() then
+					Sequence {thisModule.createTypeRef('DBObject')}
+				else
+					Sequence{}
+				endif
+			)->append(
+					thisModule.IfaceRef(s)
+			),
+			-- Change 2: deleted the creation of fields + added the delegatingPropImpl
+			Members <-
+				s.featuresToImpl->collect(r |
+					if r.refiningFeatureIn(s).oclIsUndefined() then
+						thisModule.PropImpl(s, r)
+					else
+						thisModule.DelegatingPropImpl(s, r)
+					endif
+				)->flatten()
+		)
+}
+
+rule Reference2Method {
+	from
+		s : REcore!EReference
+	to
+		t : Code!Method (
+			IsAbstract <- true,
+			-- Change 3: redefinition of name binding
+			Name <- 'get_' + s.name,
+			ReturnType <- thisModule.IfaceRef(s.eType)
+		)
+}
+
+unique lazy rule PropImpl {
+	from
+		c : REcore!EClass,
+		r : REcore!EReference
+	to
+		-- Change 4: output pattern element type changed from Property to Method
+		t : Code!Method (
+			IsAbstract <- false,
+			Name <- 'get_' + r.name,
+			BodyExpression <- get,
+			ReturnType <-  thisModule.IfaceRef(r.eType)
+		),
+		get : Code!MethodInvokeExpression (
+			Arguments <- Sequence{thg, se},
+			MethodName <- 'resolve'
+		),
+		thg : Code!ThisReferenceExpression,
+		se : Code!StringLiteralExpression(
+			Value <- r.name	
+		)
+}
+
+unique lazy rule DelegatingPropImpl {
+	from
+		c : REcore!EClass,
+		r : REcore!EReference
+	to
+		t : Code!Method (
+			IsAbstract <- false,
+			Name <- 'get_' + r.name,
+			BodyExpression <- get,
+			ReturnType <-  thisModule.IfaceRef(r.eType)
+		),
+		get : Code!MethodInvokeExpression (
+			TargetObject <- thg,
+			MethodName <- 'get_' + r.refiningFeatureIn(c).name
+		),
+		thg : Code!ThisReferenceExpression
+}
+
+rule createTypeRef(name : String) {
+	to
+		t : Code!TypeReference (
+			BaseName <- name
+		)
+	do{ t; }
+}
