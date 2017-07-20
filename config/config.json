@@ -1,5 +1,5 @@
 {
-  "Tools": ["NMF","ATLOnly","ATLAlgorithm1"],
+  "Tools": ["NMF","ATLOnly","ATLAlgorithm1","NOOP"],
   "Models": [
     "model1",
     "model2",
