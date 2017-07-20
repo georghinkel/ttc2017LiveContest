@@ -1,0 +1,215 @@
+-- @atlcompiler emftvm
+-- @path REcore=/ATL/model/RefinementsEcore.ecore
+-- @path Code=/ATL/model/SimpleCodeDOM.ecore
+module transformationA;
+create OUT : Code from IN : REcore;
+
+helper context REcore!EClass def: implName : String =
+	self.name + 'Impl';
+
+helper context REcore!EReference def: fieldName : String =
+	'_' + self.name;
+
+
+rule EPackage2Package {
+	from
+		s : REcore!EPackage
+	to
+		t : Code!Package (
+			Name <- s.name,
+			Types <-	s.eClassifiers->collect(c |
+							thisModule.resolveTemp(c, 'impl')
+						)->union(s.eClassifiers)
+		)
+}
+
+helper context REcore!EClass def: allSupertypes : OrderedSet(REcore!EClass) =
+	self.eSuperTypes->collect(c |
+		c.allSupertypes->prepend(c)
+	)->flatten()->asOrderedSet();
+
+helper context REcore!EClass def: refiningFeatures : OrderedSet(REcore!EReference) =
+	self.eStructuralFeatures->reject(r |
+		r.Refines.oclIsUndefined()
+	);
+
+-- Computes all features, keeping duplicates
+helper context REcore!EClass def: allFeaturePaths : OrderedSet(
+					TupleType(path:OrderedSet(REcore!EClass),ref:REcore!EReference,refined:Boolean)
+		) =
+	self.eSuperTypes->collect(c |
+		c.allFeaturePaths->collect(p |
+			let isSelfRefining : Boolean =
+				self.refiningFeatures->exists(r | r.Refines = p.ref)
+			in
+			Tuple {
+				path = p.path->prepend(self),
+				ref = p.ref,
+				refined = p.refined or isSelfRefining
+			}
+		)
+	)->flatten()->union(
+		self.eStructuralFeatures->collect(r |
+			Tuple {
+				path = OrderedSet {self},
+				ref = r,
+				refined = false
+			}
+		)
+	);
+
+helper context REcore!EClass def: superImpl : Sequence(REcore!EClass) =
+	let candidates : OrderedSet(REcore!Eclass) =
+		-- Not using the optional provided algorithm, but this works on the examples.
+		let allFeaturePaths : OrderedSet(
+					TupleType(path:OrderedSet(REcore!EClass),ref:REcore!EReference,refined:Boolean)
+			) = self.allFeaturePaths
+		in
+		self.allSupertypes->select(c |
+			not allFeaturePaths->exists(p |
+				p.refined and c.allFeaturePaths->exists(p2 |
+					p2.ref = p.ref and not p2.refined
+				)
+			)
+		)
+	in
+	if candidates->notEmpty() then
+		Sequence {candidates->first()}
+	else
+		Sequence {}
+	endif;
+
+helper context REcore!EClass def: allFeatures : OrderedSet(REcore!EStructuralFeature) =
+	self.eStructuralFeatures->union(
+		self.eSuperTypes->collect(c |
+			c.allFeatures
+		)->flatten()
+	)->asOrderedSet();
+	
+helper context REcore!EClass def: featuresToImpl : OrderedSet(REcore!EStructuralFeature) =
+	let inheritedFeatures : Set(REcore!EStructuralFeature) =
+		self.superImpl->collect(c | c.allFeatures)->flatten()->asSet()
+	in
+	self.allFeatures->reject(r | inheritedFeatures->includes(r));
+
+rule EClass2Interface {
+	from
+		s : REcore!EClass
+	to
+		t : Code!Class (
+			IsInterface <- true,
+			Name <- s.name,
+			BaseTypes <-	s.eSuperTypes->collect(c |
+								thisModule.IfaceRef(c)
+							),
+			Members <- s.eStructuralFeatures
+		),
+		impl : Code!Class (
+			IsInterface <- false,
+			Name <- s.implName,
+			BaseTypes <-	s.superImpl->collect(c |
+								thisModule.ImplRef(c)
+							)->append(
+								thisModule.IfaceRef(s)
+							),
+			Members <-
+				s.featuresToImpl->collect(r |
+					if r.refiningFeatureIn(s).oclIsUndefined() then
+						Sequence {
+							thisModule.FieldImpl(s, r)
+						}
+					else
+						Sequence {}
+					endif->prepend(
+						thisModule.PropImpl(s, r)
+					)
+				)->flatten()
+		)
+}
+
+rule Reference2Property {
+	from
+		s : REcore!EReference
+	to
+		t : Code!Property (
+			IsAbstract <- true,
+			Name <- s.name,
+			PropertyType <- thisModule.IfaceRef(s.eType)
+		)
+}
+
+helper context REcore!EReference def: refiningFeatureIn(c : REcore!EClass) : REcore!EReference =
+	c.allFeatures->any(r | r.Refines = self);
+
+helper context REcore!EReference def: fieldNameFrom(c : REcore!EClass) : String =
+	if self.eContainingClass = c then
+		self.fieldName
+	else
+		let refiningFeature : REcore!EClass =
+			self.refiningFeatureIn(c)
+		in
+		if refiningFeature.oclIsUndefined() then
+			self.fieldName
+		else
+			refiningFeature.name
+		endif
+	endif;
+
+unique lazy rule PropImpl {
+	from
+		c : REcore!EClass,
+		r : REcore!EReference
+	to
+		t : Code!Property (
+			IsAbstract <- false,
+			Name <- r.name,
+			PropertyType <- thisModule.IfaceRef(r.eType),
+			Getter <- get,
+			Setter <- set
+		),
+			get : Code!FieldReferenceExpression (
+				TargetObject <- thg,
+				FieldName <- r.fieldNameFrom(c)
+			),
+				thg : Code!ThisReferenceExpression,
+			set : Code!BinaryExpression (
+				Operator <- #Assign,
+				LeftOperand <- fr,
+				RightOperand <- sv
+			),
+				fr : Code!FieldReferenceExpression (
+					TargetObject <- ths,
+					FieldName <- r.fieldNameFrom(c)
+				),
+					ths : Code!ThisReferenceExpression,
+				sv : Code!SetValueExpression
+}
+
+unique lazy rule FieldImpl {
+	from
+		c : REcore!EClass,
+		r : REcore!EReference
+	to
+		t : Code!Field (
+			Name <- r.fieldName,
+			FieldType <- thisModule.IfaceRef(r.eType)
+		)
+}
+
+lazy rule IfaceRef {
+	from
+		s : REcore!EClassifier
+	to
+		t : Code!TypeReference (
+			BaseName <- s.name
+		)
+}
+
+lazy rule ImplRef {
+	from
+		s : REcore!EClassifier
+	to
+		t : Code!TypeReference (
+			BaseName <- s.implName
+		)
+}
