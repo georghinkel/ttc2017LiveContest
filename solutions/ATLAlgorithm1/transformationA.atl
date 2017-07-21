@@ -1,0 +1,101 @@
+-- @atlcompiler emftvm
+-- @path REcore=/ATL/model/RefinementsEcore.ecore
+-- @path Code=/ATL/model/SimpleCodeDOM.ecore
+module transformationA;
+create OUT : Code from IN : REcore;
+
+uses transformationShared;
+
+-- @extends EClass2Interface
+rule EClass2Class {
+	from
+		s : REcore!EClass
+	to
+		t : Code!Class,
+		impl : Code!Class (
+			IsInterface <- false,
+			Name <- s.implName,
+			BaseTypes <- s.findBaseClass->collect(c |
+				thisModule.ImplRef(c)
+			)->append(
+				thisModule.IfaceRef(s)
+			),
+			Members <-
+				s.featuresToImpl->collect(r |
+					if r.refiningFeatureIn(s).oclIsUndefined() then
+						Sequence { thisModule.FieldImpl(s, r) }
+					else
+						Sequence {}
+					endif->prepend( thisModule.PropImpl(s, r) )
+				)->flatten()
+		)
+}
+
+rule Reference2Property {
+	from
+		s : REcore!EReference
+	to
+		t : Code!Property (
+			IsAbstract <- true,
+			Name <- s.name,
+			PropertyType <- thisModule.IfaceRef(s.eType)
+		)
+}
+
+helper context REcore!EReference def: fieldName : String =
+	'_' + self.name;
+
+helper context REcore!EReference def: fieldNameFrom(c : REcore!EClass) : String =
+	if self.eContainingClass = c then
+		self.fieldName
+	else
+		let refiningFeature : REcore!EClass =
+			self.refiningFeatureIn(c)
+		in
+			if refiningFeature.oclIsUndefined() then
+				self.fieldName
+			else
+				refiningFeature.name
+			endif
+	endif;
+
+unique lazy rule PropImpl {
+	from
+		c : REcore!EClass,
+		r : REcore!EReference
+	to
+		t : Code!Property (
+			IsAbstract <- false,
+			Name <- r.name,
+			PropertyType <- thisModule.IfaceRef(r.eType),
+			Getter <- get,
+			Setter <- set
+		),
+			get : Code!FieldReferenceExpression (
+				TargetObject <- thg,
+				FieldName <- r.fieldNameFrom(c)
+			),
+				thg : Code!ThisReferenceExpression,
+			set : Code!BinaryExpression (
+				Operator <- #Assign,
+				LeftOperand <- fr,
+				RightOperand <- sv
+			),
+				fr : Code!FieldReferenceExpression (
+					TargetObject <- ths,
+					FieldName <- r.fieldNameFrom(c)
+				),
+					ths : Code!ThisReferenceExpression,
+				sv : Code!SetValueExpression
+}
+
+unique lazy rule FieldImpl {
+	from
+		c : REcore!EClass,
+		r : REcore!EReference
+	to
+		t : Code!Field (
+			Name <- r.fieldName,
+			FieldType <- thisModule.IfaceRef(r.eType)
+		)
+}
