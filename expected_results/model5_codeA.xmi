@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeDom:Package xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="model5" xmlns:xmi="http://www.omg.org/XMI" xmlns:codeDom="http://www.transformation-tool-contest.eu/2017/LiveContest/SimpleCodeDOM">
+  <Types Name="AImpl">
+    <Members xsi:type="codeDom:Property" Name="PropA">
+      <PropertyType BaseName="E" />
+      <Getter xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropA">
+        <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+      </Getter>
+      <Setter xsi:type="codeDom:BinaryExpression" Operator="Assign">
+        <LeftOperand xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropA">
+          <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+        </LeftOperand>
+        <RightOperand xsi:type="codeDom:SetValueExpression" />
+      </Setter>
+    </Members>
+    <Members xsi:type="codeDom:Field" Name="_PropA">
+      <FieldType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="BaseImpl" />
+    <BaseTypes BaseName="A" />
+  </Types>
+  <Types Name="BImpl">
+    <Members xsi:type="codeDom:Property" Name="PropB">
+      <PropertyType BaseName="E" />
+      <Getter xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropB">
+        <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+      </Getter>
+      <Setter xsi:type="codeDom:BinaryExpression" Operator="Assign">
+        <LeftOperand xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropB">
+          <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+        </LeftOperand>
+        <RightOperand xsi:type="codeDom:SetValueExpression" />
+      </Setter>
+    </Members>
+    <Members xsi:type="codeDom:Field" Name="_PropB">
+      <FieldType BaseName="E" />
+    </Members>
+    <Members xsi:type="codeDom:Property" Name="PropA">
+      <PropertyType BaseName="E" />
+      <Getter xsi:type="codeDom:FieldReferenceExpression" FieldName="PropB">
+        <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+      </Getter>
+      <Setter xsi:type="codeDom:BinaryExpression" Operator="Assign">
+        <LeftOperand xsi:type="codeDom:FieldReferenceExpression" FieldName="PropB">
+          <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+        </LeftOperand>
+        <RightOperand xsi:type="codeDom:SetValueExpression" />
+      </Setter>
+    </Members>
+    <BaseTypes BaseName="BaseImpl" />
+    <BaseTypes BaseName="B" />
+  </Types>
+  <Types Name="CImpl">
+    <Members xsi:type="codeDom:Property" Name="PropC">
+      <PropertyType BaseName="E" />
+      <Getter xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropC">
+        <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+      </Getter>
+      <Setter xsi:type="codeDom:BinaryExpression" Operator="Assign">
+        <LeftOperand xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropC">
+          <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+        </LeftOperand>
+        <RightOperand xsi:type="codeDom:SetValueExpression" />
+      </Setter>
+    </Members>
+    <Members xsi:type="codeDom:Field" Name="_PropC">
+      <FieldType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="AImpl" />
+    <BaseTypes BaseName="C" />
+  </Types>
+  <Types Name="DImpl">
+    <Members xsi:type="codeDom:Property" Name="PropD">
+      <PropertyType BaseName="E" />
+      <Getter xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropD">
+        <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+      </Getter>
+      <Setter xsi:type="codeDom:BinaryExpression" Operator="Assign">
+        <LeftOperand xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropD">
+          <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+        </LeftOperand>
+        <RightOperand xsi:type="codeDom:SetValueExpression" />
+      </Setter>
+    </Members>
+    <Members xsi:type="codeDom:Field" Name="_PropD">
+      <FieldType BaseName="E" />
+    </Members>
+    <Members xsi:type="codeDom:Property" Name="PropB">
+      <PropertyType BaseName="E" />
+      <Getter xsi:type="codeDom:FieldReferenceExpression" FieldName="PropD">
+        <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+      </Getter>
+      <Setter xsi:type="codeDom:BinaryExpression" Operator="Assign">
+        <LeftOperand xsi:type="codeDom:FieldReferenceExpression" FieldName="PropD">
+          <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+        </LeftOperand>
+        <RightOperand xsi:type="codeDom:SetValueExpression" />
+      </Setter>
+    </Members>
+    <Members xsi:type="codeDom:Property" Name="PropA">
+      <PropertyType BaseName="E" />
+      <Getter xsi:type="codeDom:FieldReferenceExpression" FieldName="PropB">
+        <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+      </Getter>
+      <Setter xsi:type="codeDom:BinaryExpression" Operator="Assign">
+        <LeftOperand xsi:type="codeDom:FieldReferenceExpression" FieldName="PropB">
+          <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+        </LeftOperand>
+        <RightOperand xsi:type="codeDom:SetValueExpression" />
+      </Setter>
+    </Members>
+    <Members xsi:type="codeDom:Property" Name="PropC">
+      <PropertyType BaseName="E" />
+      <Getter xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropC">
+        <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+      </Getter>
+      <Setter xsi:type="codeDom:BinaryExpression" Operator="Assign">
+        <LeftOperand xsi:type="codeDom:FieldReferenceExpression" FieldName="_PropC">
+          <TargetObject xsi:type="codeDom:ThisReferenceExpression" />
+        </LeftOperand>
+        <RightOperand xsi:type="codeDom:SetValueExpression" />
+      </Setter>
+    </Members>
+    <Members xsi:type="codeDom:Field" Name="_PropC">
+      <FieldType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="BaseImpl" />
+    <BaseTypes BaseName="D" />
+  </Types>
+  <Types Name="EImpl">
+    <BaseTypes BaseName="E" />
+  </Types>
+  <Types Name="A" IsInterface="True">
+    <Members xsi:type="codeDom:Property" IsAbstract="True" Name="PropA">
+      <PropertyType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="Base" />
+  </Types>
+  <Types Name="B" IsInterface="True">
+    <Members xsi:type="codeDom:Property" IsAbstract="True" Name="PropB">
+      <PropertyType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="A" />
+  </Types>
+  <Types Name="C" IsInterface="True">
+    <Members xsi:type="codeDom:Property" IsAbstract="True" Name="PropC">
+      <PropertyType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="A" />
+  </Types>
+  <Types Name="D" IsInterface="True">
+    <Members xsi:type="codeDom:Property" IsAbstract="True" Name="PropD">
+      <PropertyType BaseName="E" />
+    </Members>
+    <BaseTypes BaseName="B" />
+    <BaseTypes BaseName="C" />
+  </Types>
+  <Types Name="E" IsInterface="True" />
+</codeDom:Package>

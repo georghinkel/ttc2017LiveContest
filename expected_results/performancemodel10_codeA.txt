@@ -1,0 +1,552 @@
+package performancemodel10:
+
+interface A0
+  abstract property PropA : E0
+
+class A0Impl : A0
+  field _PropA : E0
+  property PropA : E0
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface A1
+  abstract property PropA : E1
+
+class A1Impl : A1
+  field _PropA : E1
+  property PropA : E1
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface A2
+  abstract property PropA : E2
+
+class A2Impl : A2
+  field _PropA : E2
+  property PropA : E2
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface A3
+  abstract property PropA : E3
+
+class A3Impl : A3
+  field _PropA : E3
+  property PropA : E3
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface A4
+  abstract property PropA : E4
+
+class A4Impl : A4
+  field _PropA : E4
+  property PropA : E4
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface A5
+  abstract property PropA : E5
+
+class A5Impl : A5
+  field _PropA : E5
+  property PropA : E5
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface A6
+  abstract property PropA : E6
+
+class A6Impl : A6
+  field _PropA : E6
+  property PropA : E6
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface A7
+  abstract property PropA : E7
+
+class A7Impl : A7
+  field _PropA : E7
+  property PropA : E7
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface A8
+  abstract property PropA : E8
+
+class A8Impl : A8
+  field _PropA : E8
+  property PropA : E8
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface A9
+  abstract property PropA : E9
+
+class A9Impl : A9
+  field _PropA : E9
+  property PropA : E9
+    get: this._PropA
+    set: (this._PropA = value)
+
+interface B0 : A0
+  abstract property PropB : E0
+
+class B0Impl : B0
+  field _PropB : E0
+  property PropA : E0
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E0
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface B1 : A1
+  abstract property PropB : E1
+
+class B1Impl : B1
+  field _PropB : E1
+  property PropA : E1
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E1
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface B2 : A2
+  abstract property PropB : E2
+
+class B2Impl : B2
+  field _PropB : E2
+  property PropA : E2
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E2
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface B3 : A3
+  abstract property PropB : E3
+
+class B3Impl : B3
+  field _PropB : E3
+  property PropA : E3
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E3
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface B4 : A4
+  abstract property PropB : E4
+
+class B4Impl : B4
+  field _PropB : E4
+  property PropA : E4
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E4
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface B5 : A5
+  abstract property PropB : E5
+
+class B5Impl : B5
+  field _PropB : E5
+  property PropA : E5
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E5
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface B6 : A6
+  abstract property PropB : E6
+
+class B6Impl : B6
+  field _PropB : E6
+  property PropA : E6
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E6
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface B7 : A7
+  abstract property PropB : E7
+
+class B7Impl : B7
+  field _PropB : E7
+  property PropA : E7
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E7
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface B8 : A8
+  abstract property PropB : E8
+
+class B8Impl : B8
+  field _PropB : E8
+  property PropA : E8
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E8
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface B9 : A9
+  abstract property PropB : E9
+
+class B9Impl : B9
+  field _PropB : E9
+  property PropA : E9
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E9
+    get: this._PropB
+    set: (this._PropB = value)
+
+interface C0 : A0
+  abstract property PropC : E0
+
+class C0Impl : A0Impl, C0
+  field _PropC : E0
+  property PropC : E0
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface C1 : A1
+  abstract property PropC : E1
+
+class C1Impl : A1Impl, C1
+  field _PropC : E1
+  property PropC : E1
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface C2 : A2
+  abstract property PropC : E2
+
+class C2Impl : A2Impl, C2
+  field _PropC : E2
+  property PropC : E2
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface C3 : A3
+  abstract property PropC : E3
+
+class C3Impl : A3Impl, C3
+  field _PropC : E3
+  property PropC : E3
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface C4 : A4
+  abstract property PropC : E4
+
+class C4Impl : A4Impl, C4
+  field _PropC : E4
+  property PropC : E4
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface C5 : A5
+  abstract property PropC : E5
+
+class C5Impl : A5Impl, C5
+  field _PropC : E5
+  property PropC : E5
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface C6 : A6
+  abstract property PropC : E6
+
+class C6Impl : A6Impl, C6
+  field _PropC : E6
+  property PropC : E6
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface C7 : A7
+  abstract property PropC : E7
+
+class C7Impl : A7Impl, C7
+  field _PropC : E7
+  property PropC : E7
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface C8 : A8
+  abstract property PropC : E8
+
+class C8Impl : A8Impl, C8
+  field _PropC : E8
+  property PropC : E8
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface C9 : A9
+  abstract property PropC : E9
+
+class C9Impl : A9Impl, C9
+  field _PropC : E9
+  property PropC : E9
+    get: this._PropC
+    set: (this._PropC = value)
+
+interface D0 : B0, C0
+  abstract property PropD : E0
+
+class D0Impl : D0
+  field _PropC : E0
+  field _PropD : E0
+  property PropA : E0
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E0
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E0
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E0
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface D1 : B1, C1
+  abstract property PropD : E1
+
+class D1Impl : D1
+  field _PropC : E1
+  field _PropD : E1
+  property PropA : E1
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E1
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E1
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E1
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface D2 : B2, C2
+  abstract property PropD : E2
+
+class D2Impl : D2
+  field _PropC : E2
+  field _PropD : E2
+  property PropA : E2
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E2
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E2
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E2
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface D3 : B3, C3
+  abstract property PropD : E3
+
+class D3Impl : D3
+  field _PropC : E3
+  field _PropD : E3
+  property PropA : E3
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E3
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E3
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E3
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface D4 : B4, C4
+  abstract property PropD : E4
+
+class D4Impl : D4
+  field _PropC : E4
+  field _PropD : E4
+  property PropA : E4
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E4
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E4
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E4
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface D5 : B5, C5
+  abstract property PropD : E5
+
+class D5Impl : D5
+  field _PropC : E5
+  field _PropD : E5
+  property PropA : E5
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E5
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E5
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E5
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface D6 : B6, C6
+  abstract property PropD : E6
+
+class D6Impl : D6
+  field _PropC : E6
+  field _PropD : E6
+  property PropA : E6
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E6
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E6
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E6
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface D7 : B7, C7
+  abstract property PropD : E7
+
+class D7Impl : D7
+  field _PropC : E7
+  field _PropD : E7
+  property PropA : E7
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E7
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E7
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E7
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface D8 : B8, C8
+  abstract property PropD : E8
+
+class D8Impl : D8
+  field _PropC : E8
+  field _PropD : E8
+  property PropA : E8
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E8
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E8
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E8
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface D9 : B9, C9
+  abstract property PropD : E9
+
+class D9Impl : D9
+  field _PropC : E9
+  field _PropD : E9
+  property PropA : E9
+    get: this.PropB
+    set: (this.PropB = value)
+
+  property PropB : E9
+    get: this.PropD
+    set: (this.PropD = value)
+
+  property PropC : E9
+    get: this._PropC
+    set: (this._PropC = value)
+
+  property PropD : E9
+    get: this._PropD
+    set: (this._PropD = value)
+
+interface E0
+class E0Impl : E0
+interface E1
+class E1Impl : E1
+interface E2
+class E2Impl : E2
+interface E3
+class E3Impl : E3
+interface E4
+class E4Impl : E4
+interface E5
+class E5Impl : E5
+interface E6
+class E6Impl : E6
+interface E7
+class E7Impl : E7
+interface E8
+class E8Impl : E8
+interface E9
+class E9Impl : E9

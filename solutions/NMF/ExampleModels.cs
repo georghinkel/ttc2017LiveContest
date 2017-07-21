@@ -200,5 +200,113 @@ namespace TTC2017.LiveContest
 
             return package;
         }
+        public static EPackage GenerateModel5()
+        {
+            var package = new EPackage
+            {
+                Name = "model5",
+                NsPrefix = "model5",
+                NsURI = "http://www.transformation-tool-contest.eu/2017/LiveContest/testModels/model5"
+            };
+
+            var classBase = new EClass { Name = "Base" };
+            var classA = new EClass { Name = "A" };
+            var classB = new EClass { Name = "B" };
+            var classC = new EClass { Name = "C" };
+            var classD = new EClass { Name = "D" };
+            var classE = new EClass { Name = "E" };
+
+            classA.EStructuralFeatures.Add(new EReference
+            {
+                Name = "PropA",
+                EType = classE
+            });
+            classB.EStructuralFeatures.Add(new EReference
+            {
+                Name = "PropB",
+                EType = classE,
+                Refines = classA.EStructuralFeatures[0] as IEReference
+            });
+            classC.EStructuralFeatures.Add(new EReference
+            {
+                Name = "PropC",
+                EType = classE
+            });
+            classD.EStructuralFeatures.Add(new EReference
+            {
+                Name = "PropD",
+                EType = classE,
+                Refines = classB.EStructuralFeatures[0] as IEReference
+            });
+
+            classA.ESuperTypes.Add(classBase);
+            classB.ESuperTypes.Add(classA);
+            classC.ESuperTypes.Add(classA);
+            classD.ESuperTypes.Add(classB);
+            classD.ESuperTypes.Add(classC);
+
+            package.EClassifiers.Add(classA);
+            package.EClassifiers.Add(classB);
+            package.EClassifiers.Add(classC);
+            package.EClassifiers.Add(classD);
+            package.EClassifiers.Add(classE);
+
+            return package;
+        }
+        public static EPackage GeneratePerformanceModel(int n)
+        {
+            var package = new EPackage
+            {
+                Name = $"performancemodel{n}",
+                NsPrefix = $"performancemodel{n}",
+                NsURI = $"http://www.transformation-tool-contest.eu/2017/LiveContest/testModels/performancemodel{n}"
+            };
+
+            for (int i = 0; i < n; i++)
+            {
+
+                var classA = new EClass { Name = $"A{i}" };
+                var classB = new EClass { Name = $"B{i}" };
+                var classC = new EClass { Name = $"C{i}" };
+                var classD = new EClass { Name = $"D{i}" };
+                var classE = new EClass { Name = $"E{i}" };
+
+                classA.EStructuralFeatures.Add(new EReference
+                {
+                    Name = "PropA",
+                    EType = classE
+                });
+                classB.EStructuralFeatures.Add(new EReference
+                {
+                    Name = "PropB",
+                    EType = classE,
+                    Refines = classA.EStructuralFeatures[0] as IEReference
+                });
+                classC.EStructuralFeatures.Add(new EReference
+                {
+                    Name = "PropC",
+                    EType = classE
+                });
+                classD.EStructuralFeatures.Add(new EReference
+                {
+                    Name = "PropD",
+                    EType = classE,
+                    Refines = classB.EStructuralFeatures[0] as IEReference
+                });
+
+                classB.ESuperTypes.Add(classA);
+                classC.ESuperTypes.Add(classA);
+                classD.ESuperTypes.Add(classB);
+                classD.ESuperTypes.Add(classC);
+
+                package.EClassifiers.Add(classA);
+                package.EClassifiers.Add(classB);
+                package.EClassifiers.Add(classC);
+                package.EClassifiers.Add(classD);
+                package.EClassifiers.Add(classE);
+            }
+
+            return package;
+        }
     }
 }

@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ecoreR:EPackage xmi:version="2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" nsURI="http://www.transformation-tool-contest.eu/2017/LiveContest/testModels/performancemodel20" nsPrefix="performancemodel20" name="performancemodel20" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecoreR="http://www.transformation-tool-contest.eu/2017/LiveContest/RefinementsEcore">
+  <eClassifiers xsi:type="ecoreR:EClass" name="A0">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.4" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.0" name="B0">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.0/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.4" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.0" name="C0">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.4" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.1 #//@eClassifiers.2" name="D0">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.1/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.4" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E0" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A1">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.9" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.5" name="B1">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.5/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.9" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.5" name="C1">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.9" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.6 #//@eClassifiers.7" name="D1">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.6/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.9" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E1" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A2">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.14" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.10" name="B2">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.10/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.14" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.10" name="C2">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.14" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.11 #//@eClassifiers.12" name="D2">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.11/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.14" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E2" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A3">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.19" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.15" name="B3">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.15/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.19" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.15" name="C3">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.19" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.16 #//@eClassifiers.17" name="D3">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.16/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.19" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E3" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A4">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.24" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.20" name="B4">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.20/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.24" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.20" name="C4">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.24" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.21 #//@eClassifiers.22" name="D4">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.21/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.24" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E4" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A5">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.29" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.25" name="B5">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.25/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.29" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.25" name="C5">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.29" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.26 #//@eClassifiers.27" name="D5">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.26/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.29" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E5" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A6">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.34" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.30" name="B6">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.30/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.34" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.30" name="C6">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.34" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.31 #//@eClassifiers.32" name="D6">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.31/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.34" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E6" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A7">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.39" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.35" name="B7">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.35/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.39" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.35" name="C7">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.39" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.36 #//@eClassifiers.37" name="D7">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.36/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.39" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E7" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A8">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.44" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.40" name="B8">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.40/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.44" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.40" name="C8">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.44" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.41 #//@eClassifiers.42" name="D8">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.41/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.44" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E8" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A9">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.49" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.45" name="B9">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.45/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.49" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.45" name="C9">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.49" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.46 #//@eClassifiers.47" name="D9">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.46/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.49" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E9" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A10">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.54" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.50" name="B10">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.50/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.54" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.50" name="C10">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.54" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.51 #//@eClassifiers.52" name="D10">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.51/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.54" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E10" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A11">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.59" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.55" name="B11">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.55/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.59" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.55" name="C11">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.59" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.56 #//@eClassifiers.57" name="D11">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.56/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.59" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E11" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A12">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.64" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.60" name="B12">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.60/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.64" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.60" name="C12">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.64" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.61 #//@eClassifiers.62" name="D12">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.61/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.64" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E12" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A13">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.69" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.65" name="B13">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.65/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.69" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.65" name="C13">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.69" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.66 #//@eClassifiers.67" name="D13">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.66/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.69" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E13" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A14">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.74" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.70" name="B14">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.70/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.74" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.70" name="C14">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.74" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.71 #//@eClassifiers.72" name="D14">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.71/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.74" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E14" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A15">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.79" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.75" name="B15">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.75/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.79" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.75" name="C15">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.79" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.76 #//@eClassifiers.77" name="D15">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.76/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.79" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E15" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A16">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.84" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.80" name="B16">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.80/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.84" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.80" name="C16">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.84" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.81 #//@eClassifiers.82" name="D16">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.81/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.84" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E16" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A17">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.89" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.85" name="B17">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.85/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.89" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.85" name="C17">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.89" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.86 #//@eClassifiers.87" name="D17">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.86/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.89" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E17" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A18">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.94" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.90" name="B18">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.90/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.94" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.90" name="C18">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.94" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.91 #//@eClassifiers.92" name="D18">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.91/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.94" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E18" />
+  <eClassifiers xsi:type="ecoreR:EClass" name="A19">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.99" name="PropA" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.95" name="B19">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.95/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.99" name="PropB" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.95" name="C19">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.99" name="PropC" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" eSuperTypes="#//@eClassifiers.96 #//@eClassifiers.97" name="D19">
+    <eStructuralFeatures xsi:type="ecoreR:EReference" resolveProxies="True" Refines="#//@eClassifiers.96/@eStructuralFeatures.0" changeable="True" ordered="True" unique="True" upperBound="1" eType="#//@eClassifiers.99" name="PropD" />
+  </eClassifiers>
+  <eClassifiers xsi:type="ecoreR:EClass" name="E19" />
+</ecoreR:EPackage>

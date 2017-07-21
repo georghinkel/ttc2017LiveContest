@@ -27,6 +27,11 @@ namespace TTC2017.LiveContest
                 GenerateExampleModel(ExampleModels.GenerateModel2());
                 GenerateExampleModel(ExampleModels.GenerateModel3());
                 GenerateExampleModel(ExampleModels.GenerateModel4());
+                GenerateExampleModel(ExampleModels.GenerateModel5());
+                foreach (var size in new int[] { 10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000 })
+                {
+                    GenerateExampleModel(ExampleModels.GeneratePerformanceModel(size));
+                }
             }
             else
             {

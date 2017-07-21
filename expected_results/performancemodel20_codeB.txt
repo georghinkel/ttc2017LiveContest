@@ -1,0 +1,842 @@
+package performancemodel20:
+
+interface A0
+  abstract method get_PropA() : E0
+
+class A0Impl : DBObject, A0
+  method get_PropA() : E0
+    resolve(this, 'PropA')
+
+interface A1
+  abstract method get_PropA() : E1
+
+interface A10
+  abstract method get_PropA() : E10
+
+class A10Impl : DBObject, A10
+  method get_PropA() : E10
+    resolve(this, 'PropA')
+
+interface A11
+  abstract method get_PropA() : E11
+
+class A11Impl : DBObject, A11
+  method get_PropA() : E11
+    resolve(this, 'PropA')
+
+interface A12
+  abstract method get_PropA() : E12
+
+class A12Impl : DBObject, A12
+  method get_PropA() : E12
+    resolve(this, 'PropA')
+
+interface A13
+  abstract method get_PropA() : E13
+
+class A13Impl : DBObject, A13
+  method get_PropA() : E13
+    resolve(this, 'PropA')
+
+interface A14
+  abstract method get_PropA() : E14
+
+class A14Impl : DBObject, A14
+  method get_PropA() : E14
+    resolve(this, 'PropA')
+
+interface A15
+  abstract method get_PropA() : E15
+
+class A15Impl : DBObject, A15
+  method get_PropA() : E15
+    resolve(this, 'PropA')
+
+interface A16
+  abstract method get_PropA() : E16
+
+class A16Impl : DBObject, A16
+  method get_PropA() : E16
+    resolve(this, 'PropA')
+
+interface A17
+  abstract method get_PropA() : E17
+
+class A17Impl : DBObject, A17
+  method get_PropA() : E17
+    resolve(this, 'PropA')
+
+interface A18
+  abstract method get_PropA() : E18
+
+class A18Impl : DBObject, A18
+  method get_PropA() : E18
+    resolve(this, 'PropA')
+
+interface A19
+  abstract method get_PropA() : E19
+
+class A19Impl : DBObject, A19
+  method get_PropA() : E19
+    resolve(this, 'PropA')
+
+class A1Impl : DBObject, A1
+  method get_PropA() : E1
+    resolve(this, 'PropA')
+
+interface A2
+  abstract method get_PropA() : E2
+
+class A2Impl : DBObject, A2
+  method get_PropA() : E2
+    resolve(this, 'PropA')
+
+interface A3
+  abstract method get_PropA() : E3
+
+class A3Impl : DBObject, A3
+  method get_PropA() : E3
+    resolve(this, 'PropA')
+
+interface A4
+  abstract method get_PropA() : E4
+
+class A4Impl : DBObject, A4
+  method get_PropA() : E4
+    resolve(this, 'PropA')
+
+interface A5
+  abstract method get_PropA() : E5
+
+class A5Impl : DBObject, A5
+  method get_PropA() : E5
+    resolve(this, 'PropA')
+
+interface A6
+  abstract method get_PropA() : E6
+
+class A6Impl : DBObject, A6
+  method get_PropA() : E6
+    resolve(this, 'PropA')
+
+interface A7
+  abstract method get_PropA() : E7
+
+class A7Impl : DBObject, A7
+  method get_PropA() : E7
+    resolve(this, 'PropA')
+
+interface A8
+  abstract method get_PropA() : E8
+
+class A8Impl : DBObject, A8
+  method get_PropA() : E8
+    resolve(this, 'PropA')
+
+interface A9
+  abstract method get_PropA() : E9
+
+class A9Impl : DBObject, A9
+  method get_PropA() : E9
+    resolve(this, 'PropA')
+
+interface B0 : A0
+  abstract method get_PropB() : E0
+
+class B0Impl : DBObject, B0
+  method get_PropA() : E0
+    this.get_PropB()
+
+  method get_PropB() : E0
+    resolve(this, 'PropB')
+
+interface B1 : A1
+  abstract method get_PropB() : E1
+
+interface B10 : A10
+  abstract method get_PropB() : E10
+
+class B10Impl : DBObject, B10
+  method get_PropA() : E10
+    this.get_PropB()
+
+  method get_PropB() : E10
+    resolve(this, 'PropB')
+
+interface B11 : A11
+  abstract method get_PropB() : E11
+
+class B11Impl : DBObject, B11
+  method get_PropA() : E11
+    this.get_PropB()
+
+  method get_PropB() : E11
+    resolve(this, 'PropB')
+
+interface B12 : A12
+  abstract method get_PropB() : E12
+
+class B12Impl : DBObject, B12
+  method get_PropA() : E12
+    this.get_PropB()
+
+  method get_PropB() : E12
+    resolve(this, 'PropB')
+
+interface B13 : A13
+  abstract method get_PropB() : E13
+
+class B13Impl : DBObject, B13
+  method get_PropA() : E13
+    this.get_PropB()
+
+  method get_PropB() : E13
+    resolve(this, 'PropB')
+
+interface B14 : A14
+  abstract method get_PropB() : E14
+
+class B14Impl : DBObject, B14
+  method get_PropA() : E14
+    this.get_PropB()
+
+  method get_PropB() : E14
+    resolve(this, 'PropB')
+
+interface B15 : A15
+  abstract method get_PropB() : E15
+
+class B15Impl : DBObject, B15
+  method get_PropA() : E15
+    this.get_PropB()
+
+  method get_PropB() : E15
+    resolve(this, 'PropB')
+
+interface B16 : A16
+  abstract method get_PropB() : E16
+
+class B16Impl : DBObject, B16
+  method get_PropA() : E16
+    this.get_PropB()
+
+  method get_PropB() : E16
+    resolve(this, 'PropB')
+
+interface B17 : A17
+  abstract method get_PropB() : E17
+
+class B17Impl : DBObject, B17
+  method get_PropA() : E17
+    this.get_PropB()
+
+  method get_PropB() : E17
+    resolve(this, 'PropB')
+
+interface B18 : A18
+  abstract method get_PropB() : E18
+
+class B18Impl : DBObject, B18
+  method get_PropA() : E18
+    this.get_PropB()
+
+  method get_PropB() : E18
+    resolve(this, 'PropB')
+
+interface B19 : A19
+  abstract method get_PropB() : E19
+
+class B19Impl : DBObject, B19
+  method get_PropA() : E19
+    this.get_PropB()
+
+  method get_PropB() : E19
+    resolve(this, 'PropB')
+
+class B1Impl : DBObject, B1
+  method get_PropA() : E1
+    this.get_PropB()
+
+  method get_PropB() : E1
+    resolve(this, 'PropB')
+
+interface B2 : A2
+  abstract method get_PropB() : E2
+
+class B2Impl : DBObject, B2
+  method get_PropA() : E2
+    this.get_PropB()
+
+  method get_PropB() : E2
+    resolve(this, 'PropB')
+
+interface B3 : A3
+  abstract method get_PropB() : E3
+
+class B3Impl : DBObject, B3
+  method get_PropA() : E3
+    this.get_PropB()
+
+  method get_PropB() : E3
+    resolve(this, 'PropB')
+
+interface B4 : A4
+  abstract method get_PropB() : E4
+
+class B4Impl : DBObject, B4
+  method get_PropA() : E4
+    this.get_PropB()
+
+  method get_PropB() : E4
+    resolve(this, 'PropB')
+
+interface B5 : A5
+  abstract method get_PropB() : E5
+
+class B5Impl : DBObject, B5
+  method get_PropA() : E5
+    this.get_PropB()
+
+  method get_PropB() : E5
+    resolve(this, 'PropB')
+
+interface B6 : A6
+  abstract method get_PropB() : E6
+
+class B6Impl : DBObject, B6
+  method get_PropA() : E6
+    this.get_PropB()
+
+  method get_PropB() : E6
+    resolve(this, 'PropB')
+
+interface B7 : A7
+  abstract method get_PropB() : E7
+
+class B7Impl : DBObject, B7
+  method get_PropA() : E7
+    this.get_PropB()
+
+  method get_PropB() : E7
+    resolve(this, 'PropB')
+
+interface B8 : A8
+  abstract method get_PropB() : E8
+
+class B8Impl : DBObject, B8
+  method get_PropA() : E8
+    this.get_PropB()
+
+  method get_PropB() : E8
+    resolve(this, 'PropB')
+
+interface B9 : A9
+  abstract method get_PropB() : E9
+
+class B9Impl : DBObject, B9
+  method get_PropA() : E9
+    this.get_PropB()
+
+  method get_PropB() : E9
+    resolve(this, 'PropB')
+
+interface C0 : A0
+  abstract method get_PropC() : E0
+
+class C0Impl : A0Impl, C0
+  method get_PropC() : E0
+    resolve(this, 'PropC')
+
+interface C1 : A1
+  abstract method get_PropC() : E1
+
+interface C10 : A10
+  abstract method get_PropC() : E10
+
+class C10Impl : A10Impl, C10
+  method get_PropC() : E10
+    resolve(this, 'PropC')
+
+interface C11 : A11
+  abstract method get_PropC() : E11
+
+class C11Impl : A11Impl, C11
+  method get_PropC() : E11
+    resolve(this, 'PropC')
+
+interface C12 : A12
+  abstract method get_PropC() : E12
+
+class C12Impl : A12Impl, C12
+  method get_PropC() : E12
+    resolve(this, 'PropC')
+
+interface C13 : A13
+  abstract method get_PropC() : E13
+
+class C13Impl : A13Impl, C13
+  method get_PropC() : E13
+    resolve(this, 'PropC')
+
+interface C14 : A14
+  abstract method get_PropC() : E14
+
+class C14Impl : A14Impl, C14
+  method get_PropC() : E14
+    resolve(this, 'PropC')
+
+interface C15 : A15
+  abstract method get_PropC() : E15
+
+class C15Impl : A15Impl, C15
+  method get_PropC() : E15
+    resolve(this, 'PropC')
+
+interface C16 : A16
+  abstract method get_PropC() : E16
+
+class C16Impl : A16Impl, C16
+  method get_PropC() : E16
+    resolve(this, 'PropC')
+
+interface C17 : A17
+  abstract method get_PropC() : E17
+
+class C17Impl : A17Impl, C17
+  method get_PropC() : E17
+    resolve(this, 'PropC')
+
+interface C18 : A18
+  abstract method get_PropC() : E18
+
+class C18Impl : A18Impl, C18
+  method get_PropC() : E18
+    resolve(this, 'PropC')
+
+interface C19 : A19
+  abstract method get_PropC() : E19
+
+class C19Impl : A19Impl, C19
+  method get_PropC() : E19
+    resolve(this, 'PropC')
+
+class C1Impl : A1Impl, C1
+  method get_PropC() : E1
+    resolve(this, 'PropC')
+
+interface C2 : A2
+  abstract method get_PropC() : E2
+
+class C2Impl : A2Impl, C2
+  method get_PropC() : E2
+    resolve(this, 'PropC')
+
+interface C3 : A3
+  abstract method get_PropC() : E3
+
+class C3Impl : A3Impl, C3
+  method get_PropC() : E3
+    resolve(this, 'PropC')
+
+interface C4 : A4
+  abstract method get_PropC() : E4
+
+class C4Impl : A4Impl, C4
+  method get_PropC() : E4
+    resolve(this, 'PropC')
+
+interface C5 : A5
+  abstract method get_PropC() : E5
+
+class C5Impl : A5Impl, C5
+  method get_PropC() : E5
+    resolve(this, 'PropC')
+
+interface C6 : A6
+  abstract method get_PropC() : E6
+
+class C6Impl : A6Impl, C6
+  method get_PropC() : E6
+    resolve(this, 'PropC')
+
+interface C7 : A7
+  abstract method get_PropC() : E7
+
+class C7Impl : A7Impl, C7
+  method get_PropC() : E7
+    resolve(this, 'PropC')
+
+interface C8 : A8
+  abstract method get_PropC() : E8
+
+class C8Impl : A8Impl, C8
+  method get_PropC() : E8
+    resolve(this, 'PropC')
+
+interface C9 : A9
+  abstract method get_PropC() : E9
+
+class C9Impl : A9Impl, C9
+  method get_PropC() : E9
+    resolve(this, 'PropC')
+
+interface D0 : B0, C0
+  abstract method get_PropD() : E0
+
+class D0Impl : DBObject, D0
+  method get_PropA() : E0
+    this.get_PropB()
+
+  method get_PropB() : E0
+    this.get_PropD()
+
+  method get_PropC() : E0
+    resolve(this, 'PropC')
+
+  method get_PropD() : E0
+    resolve(this, 'PropD')
+
+interface D1 : B1, C1
+  abstract method get_PropD() : E1
+
+interface D10 : B10, C10
+  abstract method get_PropD() : E10
+
+class D10Impl : DBObject, D10
+  method get_PropA() : E10
+    this.get_PropB()
+
+  method get_PropB() : E10
+    this.get_PropD()
+
+  method get_PropC() : E10
+    resolve(this, 'PropC')
+
+  method get_PropD() : E10
+    resolve(this, 'PropD')
+
+interface D11 : B11, C11
+  abstract method get_PropD() : E11
+
+class D11Impl : DBObject, D11
+  method get_PropA() : E11
+    this.get_PropB()
+
+  method get_PropB() : E11
+    this.get_PropD()
+
+  method get_PropC() : E11
+    resolve(this, 'PropC')
+
+  method get_PropD() : E11
+    resolve(this, 'PropD')
+
+interface D12 : B12, C12
+  abstract method get_PropD() : E12
+
+class D12Impl : DBObject, D12
+  method get_PropA() : E12
+    this.get_PropB()
+
+  method get_PropB() : E12
+    this.get_PropD()
+
+  method get_PropC() : E12
+    resolve(this, 'PropC')
+
+  method get_PropD() : E12
+    resolve(this, 'PropD')
+
+interface D13 : B13, C13
+  abstract method get_PropD() : E13
+
+class D13Impl : DBObject, D13
+  method get_PropA() : E13
+    this.get_PropB()
+
+  method get_PropB() : E13
+    this.get_PropD()
+
+  method get_PropC() : E13
+    resolve(this, 'PropC')
+
+  method get_PropD() : E13
+    resolve(this, 'PropD')
+
+interface D14 : B14, C14
+  abstract method get_PropD() : E14
+
+class D14Impl : DBObject, D14
+  method get_PropA() : E14
+    this.get_PropB()
+
+  method get_PropB() : E14
+    this.get_PropD()
+
+  method get_PropC() : E14
+    resolve(this, 'PropC')
+
+  method get_PropD() : E14
+    resolve(this, 'PropD')
+
+interface D15 : B15, C15
+  abstract method get_PropD() : E15
+
+class D15Impl : DBObject, D15
+  method get_PropA() : E15
+    this.get_PropB()
+
+  method get_PropB() : E15
+    this.get_PropD()
+
+  method get_PropC() : E15
+    resolve(this, 'PropC')
+
+  method get_PropD() : E15
+    resolve(this, 'PropD')
+
+interface D16 : B16, C16
+  abstract method get_PropD() : E16
+
+class D16Impl : DBObject, D16
+  method get_PropA() : E16
+    this.get_PropB()
+
+  method get_PropB() : E16
+    this.get_PropD()
+
+  method get_PropC() : E16
+    resolve(this, 'PropC')
+
+  method get_PropD() : E16
+    resolve(this, 'PropD')
+
+interface D17 : B17, C17
+  abstract method get_PropD() : E17
+
+class D17Impl : DBObject, D17
+  method get_PropA() : E17
+    this.get_PropB()
+
+  method get_PropB() : E17
+    this.get_PropD()
+
+  method get_PropC() : E17
+    resolve(this, 'PropC')
+
+  method get_PropD() : E17
+    resolve(this, 'PropD')
+
+interface D18 : B18, C18
+  abstract method get_PropD() : E18
+
+class D18Impl : DBObject, D18
+  method get_PropA() : E18
+    this.get_PropB()
+
+  method get_PropB() : E18
+    this.get_PropD()
+
+  method get_PropC() : E18
+    resolve(this, 'PropC')
+
+  method get_PropD() : E18
+    resolve(this, 'PropD')
+
+interface D19 : B19, C19
+  abstract method get_PropD() : E19
+
+class D19Impl : DBObject, D19
+  method get_PropA() : E19
+    this.get_PropB()
+
+  method get_PropB() : E19
+    this.get_PropD()
+
+  method get_PropC() : E19
+    resolve(this, 'PropC')
+
+  method get_PropD() : E19
+    resolve(this, 'PropD')
+
+class D1Impl : DBObject, D1
+  method get_PropA() : E1
+    this.get_PropB()
+
+  method get_PropB() : E1
+    this.get_PropD()
+
+  method get_PropC() : E1
+    resolve(this, 'PropC')
+
+  method get_PropD() : E1
+    resolve(this, 'PropD')
+
+interface D2 : B2, C2
+  abstract method get_PropD() : E2
+
+class D2Impl : DBObject, D2
+  method get_PropA() : E2
+    this.get_PropB()
+
+  method get_PropB() : E2
+    this.get_PropD()
+
+  method get_PropC() : E2
+    resolve(this, 'PropC')
+
+  method get_PropD() : E2
+    resolve(this, 'PropD')
+
+interface D3 : B3, C3
+  abstract method get_PropD() : E3
+
+class D3Impl : DBObject, D3
+  method get_PropA() : E3
+    this.get_PropB()
+
+  method get_PropB() : E3
+    this.get_PropD()
+
+  method get_PropC() : E3
+    resolve(this, 'PropC')
+
+  method get_PropD() : E3
+    resolve(this, 'PropD')
+
+interface D4 : B4, C4
+  abstract method get_PropD() : E4
+
+class D4Impl : DBObject, D4
+  method get_PropA() : E4
+    this.get_PropB()
+
+  method get_PropB() : E4
+    this.get_PropD()
+
+  method get_PropC() : E4
+    resolve(this, 'PropC')
+
+  method get_PropD() : E4
+    resolve(this, 'PropD')
+
+interface D5 : B5, C5
+  abstract method get_PropD() : E5
+
+class D5Impl : DBObject, D5
+  method get_PropA() : E5
+    this.get_PropB()
+
+  method get_PropB() : E5
+    this.get_PropD()
+
+  method get_PropC() : E5
+    resolve(this, 'PropC')
+
+  method get_PropD() : E5
+    resolve(this, 'PropD')
+
+interface D6 : B6, C6
+  abstract method get_PropD() : E6
+
+class D6Impl : DBObject, D6
+  method get_PropA() : E6
+    this.get_PropB()
+
+  method get_PropB() : E6
+    this.get_PropD()
+
+  method get_PropC() : E6
+    resolve(this, 'PropC')
+
+  method get_PropD() : E6
+    resolve(this, 'PropD')
+
+interface D7 : B7, C7
+  abstract method get_PropD() : E7
+
+class D7Impl : DBObject, D7
+  method get_PropA() : E7
+    this.get_PropB()
+
+  method get_PropB() : E7
+    this.get_PropD()
+
+  method get_PropC() : E7
+    resolve(this, 'PropC')
+
+  method get_PropD() : E7
+    resolve(this, 'PropD')
+
+interface D8 : B8, C8
+  abstract method get_PropD() : E8
+
+class D8Impl : DBObject, D8
+  method get_PropA() : E8
+    this.get_PropB()
+
+  method get_PropB() : E8
+    this.get_PropD()
+
+  method get_PropC() : E8
+    resolve(this, 'PropC')
+
+  method get_PropD() : E8
+    resolve(this, 'PropD')
+
+interface D9 : B9, C9
+  abstract method get_PropD() : E9
+
+class D9Impl : DBObject, D9
+  method get_PropA() : E9
+    this.get_PropB()
+
+  method get_PropB() : E9
+    this.get_PropD()
+
+  method get_PropC() : E9
+    resolve(this, 'PropC')
+
+  method get_PropD() : E9
+    resolve(this, 'PropD')
+
+interface E0
+class E0Impl : DBObject, E0
+interface E1
+interface E10
+class E10Impl : DBObject, E10
+interface E11
+class E11Impl : DBObject, E11
+interface E12
+class E12Impl : DBObject, E12
+interface E13
+class E13Impl : DBObject, E13
+interface E14
+class E14Impl : DBObject, E14
+interface E15
+class E15Impl : DBObject, E15
+interface E16
+class E16Impl : DBObject, E16
+interface E17
+class E17Impl : DBObject, E17
+interface E18
+class E18Impl : DBObject, E18
+interface E19
+class E19Impl : DBObject, E19
+class E1Impl : DBObject, E1
+interface E2
+class E2Impl : DBObject, E2
+interface E3
+class E3Impl : DBObject, E3
+interface E4
+class E4Impl : DBObject, E4
+interface E5
+class E5Impl : DBObject, E5
+interface E6
+class E6Impl : DBObject, E6
+interface E7
+class E7Impl : DBObject, E7
+interface E8
+class E8Impl : DBObject, E8
+interface E9
+class E9Impl : DBObject, E9
